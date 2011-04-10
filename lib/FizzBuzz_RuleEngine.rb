@@ -1,16 +1,9 @@
 class FizzBuzz_RuleEngine
   def self.get_rule n
-    return Mod0.new if n == 0
     return Mod1.new if n < 3
     return Mod3.new if n % 3 == 0
     return Mod5.new if n % 5 == 0
     return Mod1.new
-  end
-end
-
-class Mod0
-  def fizzbuzz n
-    0
   end
 end
 
