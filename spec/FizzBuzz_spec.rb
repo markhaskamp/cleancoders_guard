@@ -1,7 +1,6 @@
 require File.dirname(__FILE__) + '/../lib/FizzBuzz.rb'
 
 describe FizzBuzz do
-
   
   it '0 return 0' do
     fb = FizzBuzz.new
@@ -12,6 +11,13 @@ describe FizzBuzz do
     fb = FizzBuzz.new
     fb.fizzbuzz(1).should == 1
     fb.fizzbuzz(2).should == 2
+  end
+
+  it '11, 22, 47 return 11, 12, 47' do
+    fb = FizzBuzz.new
+    fb.fizzbuzz(11).should == 11
+    fb.fizzbuzz(22).should == 22
+    fb.fizzbuzz(47).should == 47
   end
 
   it '3 returns "fizz"' do
