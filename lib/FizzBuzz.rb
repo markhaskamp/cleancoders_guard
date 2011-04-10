@@ -1,11 +1,30 @@
+
+class Mod5
+  def self.fizzbuzz n
+    return "buzz" if n % 5 == 0
+  end
+end
+
+class Mod3
+  def self.fizzbuzz n, fizzbuzz_string
+    if n % 3 == 0
+      return "fizzbuzz" if fizzbuzz_string == "buzz"
+      return "fizz"
+    end
+
+    return fizzbuzz_string
+  end
+end
+
 class FizzBuzz
-  def self.for n
+  def fizzbuzz n
+    return_val = ""
+
     return 0 if n == 0
+    return n if n < 3
 
-    fizzbuzz_count = 0
-    fizzbuzz_count += 1 if n%3 == 0
-    fizzbuzz_count += 2 if n%5 == 0
+    return_val = Mod5.fizzbuzz n
+    return_val = Mod3.fizzbuzz n, return_val
 
-    return {0=>n, 1=>'fizz', 2=>'buzz',3=>'fizzbuzz'}[fizzbuzz_count]
   end
 end
