@@ -7,31 +7,23 @@ I slapped together a quick FizzBuzz solution for a simple proof of concept for [
 - created directory cleancoders/guard
 - a little rvm setup
 
-~~~
-  echo rvm "ruby-1.9.2-p136@guard" > .rvmrc  
-  rvm gemset create guard
-~~~
+    echo rvm "ruby-1.9.2-p136@guard" > .rvmrc  
+    rvm gemset create guard
 
 - created Gemfile
 - created lib/ directory
 - created spec/ directory
 
-~~~
-  bundle install  
-~~~
+    bundle install  
 
 - created the Guardfile
 
-~~~
-  guard init rspec
-~~~
+    guard init rspec
 
 - edited the Guardfile to what you see now in the repository
 - in a separate shell
 
-~~~
-  clear; bundle exec guard
-~~~
+    clear; bundle exec guard
 
 
 That's it! Start creating/editing files in the appropriate folder and watch the magic.
